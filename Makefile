@@ -20,9 +20,9 @@ run: all
 	@$(RAND_OFF) ./$(PROG_NAME) --text
 	@$(RAND_OFF) ./$(PROG_NAME) --data
 	@$(RAND_OFF) ./$(PROG_NAME) --bss
+	@$(RAND_OFF) ./$(PROG_NAME) --heap
 	@$(RAND_OFF) ./$(PROG_NAME) --memory
 	@$(RAND_OFF) ./$(PROG_NAME) --stack
-	@$(RAND_OFF) ./$(PROG_NAME) --heap
 
 $(OBJECTS):%.o:%.c
 	$(CC) $(CC_FLAGS) $< -o $@
