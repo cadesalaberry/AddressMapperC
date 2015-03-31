@@ -8,37 +8,37 @@
 int main(int argc, char *argv[]) {
 
 	if(argc == 2) {
-		if(!strcmp(argv[1], "-stack") || !strcmp(argv[1], "-s")) {
+		if(!strcmp(argv[1], "--stack") || !strcmp(argv[1], "-s")) {
 
 			// Gets stack segment bounds
 			printf("Stack:\t%p - ", stack_sgmt2(START));
 			printf("%p\n", stack_sgmt2(END));
 
-		} else if(!strcmp(argv[1], "-memory") || !strcmp(argv[1], "-m")) {
+		} else if(!strcmp(argv[1], "--memory") || !strcmp(argv[1], "-m")) {
 		
 			// Gets memory segment bounds
 			printf("Memory:\t%p - ", memory_sgmt(START));
 			printf("%p\n", memory_sgmt(END));
 
-		} else if(!strcmp(argv[1], "-text") || !strcmp(argv[1], "-t")) {
+		} else if(!strcmp(argv[1], "--text") || !strcmp(argv[1], "-t")) {
 
 			// Gets text segment bounds
 			printf("Text:\t%p - ", text_sgmt(START));
 			printf("%p\n", text_sgmt(END));
 
-		} else if(!strcmp(argv[1], "-data") || !strcmp(argv[1], "-d")) {
+		} else if(!strcmp(argv[1], "--data") || !strcmp(argv[1], "-d")) {
 
 			// Gets data segment bounds
 			printf("Data:\t%p - ", data_sgmt(START));
 			printf("%p\n", data_sgmt(END));
 
-		} else if(!strcmp(argv[1], "-bss") || !strcmp(argv[1], "-b")) {
+		} else if(!strcmp(argv[1], "--bss") || !strcmp(argv[1], "-b")) {
 
 			// Gets memory info
 			printf("BSS:\t%p - ", bss_sgmt(START));
 			printf("%p\n", bss_sgmt(END));
 
-		} else if(!strcmp(argv[1], "-heap") || !strcmp(argv[1], "-h")) {
+		} else if(!strcmp(argv[1], "--heap") || !strcmp(argv[1], "-h")) {
 
 			// Gets memory info
 			printf("Heap:\t%p - ", heap_sgmt(START));
