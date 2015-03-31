@@ -11,7 +11,9 @@ int main(int argc, char *argv[]) {
 		if(!strcmp(argv[1], "--stack") || !strcmp(argv[1], "-s")) {
 
 			// Gets stack segment bounds
-			printf("Stack:\t%p - ", stack_sgmt2(START));
+			printf("Stack:\t");
+			fflush(stdout);
+			printf("%p - ", stack_sgmt2(START));
 			printf("%p\n", stack_sgmt2(END));
 
 		} else if(!strcmp(argv[1], "--memory") || !strcmp(argv[1], "-m")) {
@@ -46,6 +48,7 @@ int main(int argc, char *argv[]) {
 
 			// Gets memory info
 			printf("Heap:\t");
+			fflush(stdout);
 			printf("%p - ", heap_sgmt(START));
 			printf("%p \n", heap_sgmt(END));
 
